@@ -6,6 +6,8 @@ pipeline {
             steps {
                 echo 'build'
 		sh 'node --version'
+		sh 'npm --version'
+		sh 'newman --version'
             }
         }
         stage('Test'){
