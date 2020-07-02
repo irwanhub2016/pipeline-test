@@ -1,9 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Pre-Test') {
             steps {
                 echo 'build'
+		sh 'node --version'
             }
         }
         stage('Test'){
@@ -11,7 +12,7 @@ pipeline {
                 echo 'dev test'
             }
         }
-        stage('Regression'){
+        stage('Report'){
             steps{
                 echo 'testing...'
             }
