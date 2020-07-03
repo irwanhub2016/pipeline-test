@@ -13,11 +13,12 @@ pipeline {
         stage('Test'){
             steps{
                 echo 'dev test'
+		sh 'newman run https://www.getpostman.com/collections/44373a3e0014b638ebd5'
             }
         }
         stage('Report'){
             steps{
-                echo 'testing...'
+                echo 'generate report...'
             }
         }
             
