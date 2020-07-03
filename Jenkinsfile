@@ -18,16 +18,14 @@ pipeline {
         }
         stage('Report'){
             steps{
-                echo 'generate report...'
-		publishHTML target: [
-            		allowMissing: false,
-            		alwaysLinkToLastBuild: false,
-			includes: '**/*.html',
-            		keepAll: true,
-            		reportDir: 'newman',
-            		reportFiles: 'index.html',
-            		reportName: 'test report'
-          	]
+                echo 'generate report..'
+publishHTML (target : [allowMissing: false,
+ alwaysLinkToLastBuild: true,
+ keepAll: true,
+ reportDir: 'newman',
+ reportFiles: 'myreport.html',
+ reportName: 'My Reports',
+ reportTitles: 'The Report'])
             }
         }
             
