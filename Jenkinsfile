@@ -22,6 +22,7 @@ pipeline {
 		publishHTML target: [
             		allowMissing: false,
             		alwaysLinkToLastBuild: false,
+			includes: '**/*.html',
             		keepAll: true,
             		reportDir: 'newman',
             		reportFiles: 'index.html',
